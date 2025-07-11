@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unsafe Web Page Simulation</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #121212;
+      color: #ffffff;
+    }
+    .warning {
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #ff1744;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #d50000;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚨 Unsafe Web Page Simulation 🚨</h1>
+  <p>This page demonstrates how a badly designed or malicious site can overload your device.</p>
+  <p class="warning">⚠️ Do not use on mobile for long. This is a classroom demo only. ⚠️</p>
+
+  <button onclick="startBadLoop()">Simulate Bad Code</button>
+
+  <script>
+    function startBadLoop() {
+      alert("This will simulate a bad site that causes CPU overload. Press OK to continue.");
+      // Simulate high CPU usage
+      while (true) {
+        Math.sqrt(Math.random() * Math.random());
+      }
+    }
+  </script>
+</body>
+</html>
