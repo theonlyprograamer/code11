@@ -67,23 +67,6 @@ body {
 .typewriter-text {
   font-size: 2rem;
   color: #00aced;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #00aced;
-  width: 0;
-  animation: typing 3s steps(22, end) forwards, blink 0.7s step-end infinite;
-  max-width: 100%;
-}
-
-/* Typing Animations */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 22ch; }
-}
-
-@keyframes blink {
-  0%, 100% { border-color: #00aced; }
-  50% { border-color: transparent; }
 }
 
 /* Sections */
@@ -119,3 +102,6 @@ h2 {
     align-items: flex-start;
   }
 }
+
+
+
