@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const text = "The Coding Redefined";
-  const target = document.querySelector(".typewriter-text");
+  const target = document.getElementById("typewriter");
   let i = 0;
 
   function type() {
