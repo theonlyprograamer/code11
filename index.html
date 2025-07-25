@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Verification Page</title>
-  <style>
-    body {
-      background: #121212;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      flex-direction: column;
-    }
-
-    button {
-      padding: 14px 28px;
-      font-size: 18px;
-      background-color: #ff3d00;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 0 12px rgba(255, 61, 0, 0.4);
-    }
-
-    button:hover {
-      background-color: #d32f2f;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code 11 - The Coding Redefined</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-text">Code 11</div>
+      <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <button onclick="startLoop()">Tap to Verify</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/code11-logo.jpg" alt="Code 11 Logo" class="logo-img" />
+    <h1 class="typewriter-text"></h1>
+  </section>
 
-  <script>
-    function startLoop() {
-      alert("Verification in progress...");
-      while (true) {
-        Math.sqrt(Math.random() * Math.random());
-      }
-    }
-  </script>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are Code 11 — redefining the world of programming through innovation, technology, and education.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Web Development</li>
+      <li>Mobile App Development</li>
+      <li>Software Consulting</li>
+      <li>Tech Training & Workshops</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@code11.com</p>
+    <p>Phone: +91-9876543210</p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
