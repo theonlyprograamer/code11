@@ -3,189 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Code 11 | The Code Redefined</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f8;
-    }
-
-    header {
-      background-color: #0a3d62;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    nav button {
-      background-color: white;
-      color: #0a3d62;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    nav button:hover {
-      background-color: #dcdde1;
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .welcome {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #0a3d62;
-    }
-
-    .subtext {
-      font-size: 18px;
-      color: #333;
-    }
-
-    .login-container {
-      display: none;
-      max-width: 400px;
-      margin: 30px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .login-container h3 {
-      margin-bottom: 20px;
-    }
-
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #0a3d62;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .message {
-      margin-top: 15px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 5px;
-      }
-    }
-  </style>
+  <title>Code 11 - The Coding Redefined</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <header>
-    <div class="logo">Code 11</div>
-    <nav>
-      <button onclick="scrollToSection('home')">Home</button>
-      <button onclick="scrollToSection('about')">About Us</button>
-      <button onclick="scrollToSection('services')">Services</button>
-      <button onclick="scrollToSection('contact')">Contact Us</button>
-      <button onclick="showLogin()">Login</button>
+    <nav class="navbar">
+      <div class="logo">Code 11</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="section" id="home">
-    <div class="welcome">The Code Redefined</div>
-    <div class="subtext">Welcome to Code 11 - Where Innovation Begins</div>
-  </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>The Coding Redefined</h1>
+    </div>
+  </section>
 
-  <div class="section" id="about">
+  <!-- About Us Section -->
+  <section id="about" class="section">
     <h2>About Us</h2>
-    <p>We are Code 11, redefining how the world writes software.</p>
-  </div>
+    <p>We are Code 11, committed to redefining the coding experience for modern developers and businesses.</p>
+  </section>
 
-  <div class="section" id="services">
+  <!-- Services Section -->
+  <section id="services" class="section">
     <h2>Our Services</h2>
-    <p>Web Development, UI/UX Design, Automation, and more...</p>
-  </div>
+    <ul>
+      <li>Custom Web Development</li>
+      <li>UI/UX Design</li>
+      <li>Full Stack Applications</li>
+      <li>Consulting & Training</li>
+    </ul>
+  </section>
 
-  <div class="section" id="contact">
+  <!-- Contact Us Section -->
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:code11official01@gmail.com">code11official01@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919061001602">+91 9061001602</a></p>
-    <p>WhatsApp: <a href="https://wa.me/919061001602" target="_blank">Contact via WhatsApp</a></p>
-  </div>
+    <p>📞 <a href="tel:+919061001602">+91 9061001602</a></p>
+    <p>📧 <a href="mailto:code11official01@gmail.com">code11official01@gmail.com</a></p>
+    <p>💬 <a href="https://wa.me/919061001602" target="_blank">Contact us through WhatsApp</a></p>
+  </section>
 
-  <div class="login-container" id="loginContainer">
-    <form onsubmit="return validateLogin(event)">
-      <h3>Login</h3>
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <input type="submit" value="Login" />
-      <div class="message" id="loginMessage"></div>
-    </form>
-  </div>
-
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function showLogin() {
-      document.getElementById("loginContainer").style.display = "block";
-      document.getElementById("loginMessage").innerText = "";
-    }
-
-    function validateLogin(event) {
-      event.preventDefault();
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-
-      const msg = document.getElementById("loginMessage");
-
-      if (user === "hey" && pass === "hey") {
-        msg.innerText = "✅ Login successful!";
-        msg.style.color = "green";
-      } else {
-        msg.innerText = "❌ Invalid username or password.";
-        msg.style.color = "red";
-      }
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025 Code 11. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
