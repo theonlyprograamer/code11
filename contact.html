@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Code 11</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #00aced;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #008bb9;
+    }
+  </style>
 </head>
 <body>
 
@@ -29,35 +53,28 @@
   <section id="contact" style="text-align: center;">
     <h2>We'd Love to Hear from You!</h2>
 
-    <p>
-      📧 Email:
-      <a href="mailto:code11official01@gmail.com" style="color: #00aced;">
-        code11official01@gmail.com
-      </a>
-    </p>
-
-    <p>
-      📞 Phone:
-      <a href="tel:+919061001602" style="color: #00aced;">
-        +91 9061001602
-      </a>
-    </p>
-
-    <p>
-      📍 Address:
+    <p>📧 Email: <a href="mailto:code11official01@gmail.com" style="color: #00aced;">code11official01@gmail.com</a></p>
+    <p>📞 Phone: <a href="tel:+919061001602" style="color: #00aced;">+91 9061001602</a></p>
+    <p>📍 Address:
       <a href="https://www.google.com/maps/search/?api=1&query=11+Code+Street,+Bengaluru,+India"
-         target="_blank" style="color: #00aced;">
-        11 Code Street, Bengaluru, India
-      </a>
-    </p>
-
-    <p>
-      💬 WhatsApp:
+         target="_blank" style="color: #00aced;">11 Code Street, Bengaluru, India</a></p>
+    <p>💬 WhatsApp:
       <a href="https://wa.me/919061001602?text=Hi%2C%20I'm%20interested%20in%20your%20services%21"
-         target="_blank" style="color: #25D366;">
-        Contact us through WhatsApp
-      </a>
-    </p>
+         target="_blank" style="color: #25D366;">Contact us through WhatsApp</a></p>
+
+    <!-- Contact Form -->
+    <h3>Or send us a message:</h3>
+    <form action="https://formsubmit.co/code11official01@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+
+      <!-- Optional settings -->
+      <input type="hidden" name="_subject" value="New message from Code 11 website!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+    </form>
   </section>
 
 </body>
