@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Code 11</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .login-page {
+      max-width: 400px;
+      margin: 100px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .login-page h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-page input[type="text"],
+    .login-page input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-page input[type="submit"] {
+      background-color: #0a3d62;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-page .message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-page">
+    <h2>Login</h2>
+    <form onsubmit="return validateLogin(event)">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="submit" value="Login" />
+      <div class="message" id="loginMessage"></div>
+    </form>
+  </div>
+
+  <script>
+    function validateLogin(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const msg = document.getElementById("loginMessage");
+
+      if (username === "hey" && password === "hey") {
+        msg.textContent = "✅ Login Successful!";
+        msg.style.color = "green";
+      } else {
+        msg.textContent = "❌ Invalid username or password.";
+        msg.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
